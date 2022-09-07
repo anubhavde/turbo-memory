@@ -13,12 +13,12 @@ The goal is to understand the relationship between code and comments in Python n
 
 ### **Data Description**
 
-The dataset comprises about 160,000 Jupyter notebooks published by the Kaggle community. Jupyter notebooks are the tool of choice for many data scientists for their ability to tell a narrative with both code and natural language. These two types of discourse are contained within cells of the notebook, and we refer to these cells as either code cells or markdown cells (markdown being the text formatting language used by Jupyter).
+The dataset(2.16GB) comprises about 160,000 Jupyter notebooks published by the Kaggle community. Jupyter notebooks are the tool of choice for many data scientists for their ability to tell a narrative with both code and natural language. These two types of discourse are contained within cells of the notebook, and we refer to these cells as either code cells or markdown cells (markdown being the text formatting language used by Jupyter).
 
 Our task is to predict the correct ordering of the cells in a given notebook whose markdown cells have been shuffled.
 
 The notebooks in this dataset have been selected and processed to ensure their suitability for the task. All notebooks:
-- Have been published publicly on Kaggle under the Apache 2.0 open source license.
+- Have been published publicly on Kaggle under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) open source license.
 - Represent the most recently published version of the notebook.
 - Contain at least one code cell and at least one markdown cell.
 - Have code written in the Python language.
@@ -43,4 +43,8 @@ To help you author submission code, we include a few example instances selected 
 
 test/ - A few example notebooks from the test set. The actual test set comprises about 20,000 notebooks in a format similar to the training set notebooks. No notebook in the test set has an ancestor in the training set.
 sample_submission.csv - A sample submission file in the correct format. See the Evaluation page for more details.
+
+Use kaggle API to access the dataset:
+```console
 kaggle competitions download -c AI4Code
+```
